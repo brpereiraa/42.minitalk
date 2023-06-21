@@ -6,7 +6,7 @@
 /*   By: brunolopes <brunolopes@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 09:51:51 by brunolopes        #+#    #+#             */
-/*   Updated: 2023/06/21 13:34:26 by brunolopes       ###   ########.fr       */
+/*   Updated: 2023/06/21 15:03:46 by brunolopes       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,10 @@ int main(int argc, char **argv)
 	int pid;
 	if(checkArgs(argc))
 	{
-		printf("Wrong number of arguments");
+		ft_printf("Wrong number of arguments");
 		return (1);
 	}
-	pid = atoi(argv[1]);
+	pid = ft_atoi(argv[1]);
 	sendMessage(pid, argv[2]);
 	sendMessage(pid, "\n");
 	return (0);
