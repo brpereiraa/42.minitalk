@@ -6,7 +6,7 @@
 /*   By: brunolopes <brunolopes@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 09:51:51 by brunolopes        #+#    #+#             */
-/*   Updated: 2023/06/21 10:44:34 by brunolopes       ###   ########.fr       */
+/*   Updated: 2023/06/21 10:53:54 by brunolopes       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ int checkArgs(int ac, char *av)
 {
 	if (ac != 3)
 		return (1);
-	if (!ft_isdigit(av))
+	if (!isdigit(av))
 		return (1);
 	return (0);
 }
 
-char sendMessage(const char *pid, const char *str)
+char sendMessage(int pid, char *str)
 {
 	int	bits;
 
@@ -45,12 +45,12 @@ char sendMessage(const char *pid, const char *str)
 int main(int argc, char **argv)
 {
 	int pid;
-	if(checkArgs(argc, *argv[1]))
+	if(checkArgs(argc, argv[1]))
 	{
-		ft_printf("Wrong number of arguments or invalid PID");
+		printf("Wrong number of arguments or invalid PID");
 		return (0);
 	}
-	pid = ft_atoi(argv[1])
-	sendMessage(pid	, *argv[2])
+	pid = atoi(argv[1]);
+	sendMessage(pid	, argv[2]);
 	return (0);
 }
