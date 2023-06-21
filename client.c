@@ -6,7 +6,7 @@
 /*   By: brunolopes <brunolopes@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 09:51:51 by brunolopes        #+#    #+#             */
-/*   Updated: 2023/06/16 20:55:04 by brunolopes       ###   ########.fr       */
+/*   Updated: 2023/06/21 10:44:34 by brunolopes       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int checkArgs(int ac, char *av)
 	return (0);
 }
 
-char sendMessage(pid_t pid, const char *str)
+char sendMessage(const char *pid, const char *str)
 {
 	int	bits;
 
