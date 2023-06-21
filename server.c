@@ -6,7 +6,7 @@
 /*   By: brunolopes <brunolopes@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 09:52:21 by brunolopes        #+#    #+#             */
-/*   Updated: 2023/06/21 10:50:58 by brunolopes       ###   ########.fr       */
+/*   Updated: 2023/06/21 11:05:38 by brunolopes       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void handle_msg(int signal)
 	bit_count++;
 	if(bit_count && c)
 	{
-		write(1, &c, 1);
+		printf("%c", c);
 		c = 0;
 		bit_count = 0;
 	}
