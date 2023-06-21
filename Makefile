@@ -9,13 +9,13 @@ OBJ_CLIENT = ${SRC_CLIENT:.c=.o}
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 MAKE = make -C
-PRINTF_PATH = libft/libft.a
+LIBFT_PATH = libft/libft.a
 
 all:    ${NAME}
 
 $(NAME):    ${OBJ_SERVER} ${OBJ_CLIENT}
 			${MAKE} libft
-			cp ${PRINTF_PATH} ${NAME}
+			cp ${LIBFT_PATH} ${NAME}
 			ar rcs ${NAME} ${OBJ_SERVER} ${OBJ_CLIENT}
 			cc ${CFLAGS} ${OBJ_SERVER} ${NAME} -o server
 			cc ${CFLAGS} ${OBJ_CLIENT} ${NAME} -o client

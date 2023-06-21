@@ -6,7 +6,7 @@
 /*   By: brunolopes <brunolopes@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 09:52:21 by brunolopes        #+#    #+#             */
-/*   Updated: 2023/06/21 13:42:11 by brunolopes       ###   ########.fr       */
+/*   Updated: 2023/06/21 14:20:01 by brunolopes       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main(void)
 
 	pid = getpid();
 	printf("PID: %i\n", pid);
-	printf("Waiting on message \n");
+	printf("Waiting on message from client... \n");
 	while(true)
 	{
 		signal(SIGUSR1, handle_msg);
