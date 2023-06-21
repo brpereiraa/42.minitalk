@@ -6,7 +6,7 @@
 /*   By: brunolopes <brunolopes@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 09:51:51 by brunolopes        #+#    #+#             */
-/*   Updated: 2023/06/21 12:24:51 by brunolopes       ###   ########.fr       */
+/*   Updated: 2023/06/21 13:34:26 by brunolopes       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void sendMessage(int pid, char *str)
 		{
 			if((*str & (0x01 << bits)) != 0)
 				kill(pid, SIGUSR1);
-				
 			else
 				kill(pid, SIGUSR2);
 			usleep(50);
@@ -51,5 +50,6 @@ int main(int argc, char **argv)
 	}
 	pid = atoi(argv[1]);
 	sendMessage(pid, argv[2]);
+	sendMessage(pid, "\n");
 	return (0);
 }
