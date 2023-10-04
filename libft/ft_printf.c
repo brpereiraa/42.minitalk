@@ -50,7 +50,7 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%')
 		{
 			len += ft_format(str[++i], ap);
-		}	
+		}
 		else
 		{
 			ft_putchar_fd (str[i], 1);

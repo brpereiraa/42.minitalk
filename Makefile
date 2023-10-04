@@ -20,6 +20,19 @@ $(NAME):    ${OBJ_SERVER} ${OBJ_CLIENT}
 			cc ${CFLAGS} ${OBJ_SERVER} ${NAME} -o server
 			cc ${CFLAGS} ${OBJ_CLIENT} ${NAME} -o client
 
+server: ${OBJ_SERVER}
+	${MAKE} libft
+	cp ${LIBFT_PATH} ${NAME}
+	ar rcs ${NAME} ${OBJ_SERVER}
+	cc ${CFLAGS} ${OBJ_SERVER} ${NAME} -o server
+
+client: ${OBJ_CLIENT}
+	${MAKE} libft
+	cp ${LIBFT_PATH} ${NAME}
+	ar rcs ${NAME} ${OBJ_CLIENT}
+	cc ${CFLAGS} ${OBJ_CLIENT} ${NAME} -o client
+
+
 clean:	
 		${MAKE} libft clean
 		${RM} ${OBJ_SERVER} ${OBJ_CLIENT}
